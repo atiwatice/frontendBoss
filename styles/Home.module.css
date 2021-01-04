@@ -1,0 +1,39 @@
+.container {
+  background-image: url("../public/Home1.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0 ;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.HeaderBackground {
+  background-color: #f0f0f0 ;
+  opacity: 0.6;
+  height: 10vh;
+}
+
+.ContentBackground {
+  height: 70vh;
+  
+}
+
+
+.FooterBackground {
+  background-color: #f0f0f0 ;
+  opacity: 0.6;
+  height: 8vh;
+}
+
+.siderList{
+  background: #d82e2e !important;
+  opacity: 0.7 !important;
+}
+
+.siderList > span{
+  background: #9E4624 !important;
+}

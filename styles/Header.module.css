@@ -1,0 +1,54 @@
+.HeaderBackground {
+  background-color:NONE ;
+  width: 100%;
+  height: 50px;
+  
+}
+
+
+.title {
+  font-family: "Helvetica";
+  font-size: 25px;
+  font-weight: bold;
+  color: black !important;
+}
+.headerTopic {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: bold;
+  color: black !important;
+}
+
+.pointer:hover {
+  cursor: pointer;
+  color:#8f8f8f !important
+}
+.login_form_button {
+    width: 100%;
+    background-color: #7e7e7e !important;
+    border-color:#7e7e7e !important;
+    color: #FFFFFF !important;
+  }
+  .login_form_button:hover {
+    width: 100%;
+    background-color: #a3a3a3 !important;
+    border-color:#7e7e7e !important;
+    color: #FFFFFF !important;
+  }
+
+
+.formBackground{
+  width: 200px;
+  height: 150px;
+  opacity: 0.8;
+}
+
+.logout{
+  width: 200px;
+  height: 120px;
+  opacity: 0.8;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: bold;
+}
+
