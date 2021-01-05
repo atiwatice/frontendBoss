@@ -6,21 +6,17 @@ import Register from "../component/register";
 const { Header, Footer, Sider, Content } = Layout;
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
 import { loginState } from "../store/recoilState";
-import React, { useState, Component, useEffect } from "react";
-
+import React, { useState, Component, useEffect, useRef } from "react";
 
 export default function RegisterPage() {
   const [loginstatus, setLoginstatus] = useRecoilState(loginState);
+  const lastestLoginStatus = useRef(loginstatus);
 
-  const content = null
+  useEffect(() => {
+    lastestLoginStatus.current = loginstatus;
+  }, [loginstatus]);
 
-  useEffect(async () => {
-
-    const content = loginstatus == "LOGOUT" ? <Register /> : <div></div>;
-  });
-
-
-
+  useEffect(() => {});
 
   return (
     <Layout className={styles.container}>
@@ -28,7 +24,9 @@ export default function RegisterPage() {
         <HeaderComponent />
       </Header>
       {/* <Content className={styles.ContentBackground} ><Register/></Content> */}
-      <Content className={styles.ContentBackground}>{content}</Content>
+      <Content className={styles.ContentBackground}>
+        {loginstatus === "LOGIN" ? <div></div> : <Register />}
+      </Content>
       <Footer className={styles.FooterBackground}>About us</Footer>
     </Layout>
   );

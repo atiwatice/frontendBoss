@@ -13,6 +13,7 @@ import {
   Button,
   Modal,
   Avatar,
+  notification,
 } from "antd";
 import { LoadingOutlined, UserOutlined, LockOutlined } from "@ant-design/icons";
 import Axios from "../config/axios.setup";
@@ -30,6 +31,23 @@ export default function HeaderComponent() {
   const [loginstatus, setLoginstatus] = useRecoilState(loginState);
   let userData = null;
 
+  const openNotificationWithIcon = (type) => {
+    let messageA = "";
+    let desscriptionA = "";
+    if (type == "success") {
+      messageA = "SUCCESS";
+      desscriptionA = "LOGIN SUCCESS";
+    } else if (type == "error") {
+      messageA = "FAIL";
+      desscriptionA = "Username or Password is invalid";
+    }
+
+    notification[type]({
+      message: messageA,
+      description: desscriptionA,
+    });
+  };
+
   const handleFinish = React.useCallback((values) => {
     Axios.post("/authenticate", {
       username: values.username,
@@ -41,10 +59,7 @@ export default function HeaderComponent() {
           setPending(false);
           setViewMode(true);
           if (response.data.token != null) {
-            Modal.success({
-              title: "Success",
-              content: "Log in success",
-            });
+            openNotificationWithIcon("success");
             const token = await response.data.token;
             cookies.set("token", token);
 
@@ -65,10 +80,7 @@ export default function HeaderComponent() {
       },
       (error) => {
         // console.error(error);
-        Modal.error({
-          title: "Fail",
-          content: "Username or Password is invalid",
-        });
+        openNotificationWithIcon("error");
       }
     );
   }, []);
@@ -190,6 +202,7 @@ export default function HeaderComponent() {
             <Popover placement="bottom" content={content} trigger="hover">
               <div className={styles.pointer}>Profile</div>
             </Popover>
+            
           </Col>
         </Row>
       }

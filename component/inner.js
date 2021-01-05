@@ -1,6 +1,6 @@
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
-import React, { useState } from 'react';
-import {  Button } from "antd";
 export default function Example() {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
@@ -8,8 +8,9 @@ export default function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <Button type="primary" onClick={() => setCount(count + 1)}>Click me</Button>
-      
+      <Button type="primary" onClick={() => setCount(count + 1)}>
+        Click me
+      </Button>
     </div>
   );
 }

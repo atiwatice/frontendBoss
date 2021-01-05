@@ -1,9 +1,10 @@
-import Example from "../component/inner";
+import MyTask from "../component/MyTask";
 import React, { useState } from "react";
-import { Button, Layout, Menu, Breadcrumb } from "antd";
+import { Layout } from "antd";
 import { handleAuthSSR } from "../utils/auth";
 import HeaderComponent from "../component/header";
 import styles from "../styles/Home.module.css";
+import { Button, Tab, Row, Col, ListGroup } from "react-bootstrap";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -13,33 +14,48 @@ export default function Home() {
       <Header className={styles.HeaderBackground}>
         <HeaderComponent />
       </Header>
-      <Layout className={styles.siderList}>
-        <Sider width={200} >
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={["1"]}
-            defaultOpenKeys={["sub1"]}
-            style={{ height: "100%", borderRight: 0 }}
-          >
-            <Menu.Item key="1">option1</Menu.Item>
-            <Menu.Item key="2">option2</Menu.Item>
-            <Menu.Item key="3">option3</Menu.Item>
-            <Menu.Item key="4">option4</Menu.Item>
-          </Menu>
-        </Sider>
-        <Layout style={{ padding: "0 24px 24px" }}>
-          <Content
-            className="site-layout-background"
-            style={{
-              padding: 24,
-              margin: 0,
-              minHeight: 280,
-            }}
-          >
-            Content
-          </Content>
-        </Layout>
-      </Layout>
+      <Tab.Container id="list-group-tabs-example" defaultActiveKey="#MT">
+        <Row>
+          <Col sm={2}>
+            <ListGroup className={styles.siderList}>
+              <ListGroup.Item action href="#MT" variant="light">
+                My Task
+              </ListGroup.Item>
+              <ListGroup.Item action href="#UMT" variant="light">
+                Update Task Status
+              </ListGroup.Item>
+              <ListGroup.Item action href="#MC" variant="light">
+                Manage Collaborators
+              </ListGroup.Item>
+              <ListGroup.Item action href="#RE" variant="light">
+                Report
+              </ListGroup.Item>
+              <ListGroup.Item action href="#PR" variant="light">
+                Profile
+              </ListGroup.Item>
+            </ListGroup>
+          </Col>
+          <Col sm={10}>
+            <Tab.Content>
+              <Tab.Pane eventKey="#MT">
+                <MyTask/>
+              </Tab.Pane>
+              <Tab.Pane eventKey="#UMT">
+                <div>Update Task Status</div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="#MC">
+                <div>Manage Collaborators</div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="#RE">
+                <div>Report</div>
+              </Tab.Pane>
+              <Tab.Pane eventKey="#PR">
+                <div>Profile</div>
+              </Tab.Pane>
+            </Tab.Content>
+          </Col>
+        </Row>
+      </Tab.Container>
     </Layout>
   );
 }

@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import styles from "../styles/Register.module.css";
-import { Row, Col, Form, Input, Button, Divider, Modal } from "antd";
+import { Row, Col, Form, Input, Divider, Modal } from "antd";
+import { Button } from "react-bootstrap";
 import Axios from "../config/axios.setup";
 export default function Register() {
   const [form] = Form.useForm();
@@ -47,7 +48,7 @@ export default function Register() {
   return (
     <div className={styles.background}>
       <Row>
-        <h1 className={styles.topicRegister}>REGISTER</h1>
+        <h2 className={styles.topicRegister}>REGISTER</h2>
       </Row>
       <Row>
         <Divider className={styles.divider} />
@@ -63,7 +64,7 @@ export default function Register() {
             <Row gutter={[16, 0]}>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="username"
                   label="Username"
                   rules={[
@@ -81,7 +82,7 @@ export default function Register() {
             <Row gutter={[16, 0]}>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="password"
                   label="Password"
                   rules={[
@@ -97,7 +98,7 @@ export default function Register() {
               </Col>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="confirm"
                   label="Confirm Password"
                   dependencies={["password"]}
@@ -127,7 +128,7 @@ export default function Register() {
             <Row gutter={[16, 0]}>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="firstname"
                   label="Firstname"
                   rules={[
@@ -145,7 +146,7 @@ export default function Register() {
               </Col>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="lastname"
                   label="Lastname"
                   rules={[
@@ -163,7 +164,7 @@ export default function Register() {
             <Row>
               <Col span={20}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="address"
                   label="Address"
                   rules={[
@@ -180,7 +181,7 @@ export default function Register() {
             <Row gutter={[16, 0]}>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="email"
                   label="E-mail"
                   rules={[
@@ -199,7 +200,7 @@ export default function Register() {
               </Col>
               <Col span={10}>
                 <Form.Item
-                className={styles.itemForm}
+                  className={styles.itemForm}
                   name="mobileno"
                   label="Mobile no."
                   rules={[
@@ -217,19 +218,20 @@ export default function Register() {
               <Col span={10}></Col>
               <Col span={10}>
                 <Row justify="space-around">
-                  <Form.Item >
+                  <Form.Item>
                     <Button
                       type="primary"
+                      variant="secondary"
                       htmlType="submit"
-                      className={styles.login_form_button}
+                      // className={styles.login_form_button}
                     >
                       Register
                     </Button>
                   </Form.Item>
                   <Form.Item>
                     <Button
-                      type="primary"
-                      className={styles.login_form_button}
+                      variant="secondary"
+                      // className={styles.login_form_button}
                       onClick={onReset}
                     >
                       Cancel
