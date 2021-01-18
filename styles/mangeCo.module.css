@@ -1,0 +1,85 @@
+.background {
+  background-color: #f0f0f0;
+  opacity: 0.7;
+  height: 87vh;
+  width: 97%;
+  margin-top: 1%;
+  color: black !important;
+}
+
+.divider {
+  display: inline-block;
+  width: 2px;
+  background-color: black;
+  margin: 0 10px;
+  height: 84vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.findCollaboratorHeader {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+.findCollaborator {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #bdbdbd;
+  /* border:None; */
+  border-width: 1px;
+  /* opacity: 0.7; */
+  height: 35vh;
+  width: 90%;
+  margin-top: 0%;
+  margin-bottom: 1.5%;
+  color: black !important;
+  /* overflow: scroll; */
+}
+
+.requestCollaboratorHeader {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.requestCollaborator {
+  background-color: #ffffff;
+  border-style: solid; 
+  border-color: #bdbdbd;
+
+   border-width: 1px;
+   opacity: 0.7; 
+  height: 35vh;
+  width: 90%;
+  margin-top: 0%;
+  margin-bottom: 1.5%;
+  color: black !important;
+  overflow: scroll;
+}
+
+.Collaborator {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #bdbdbd;
+
+  border-width: 1px;
+  /* opacity: 0.7; */
+  height: 77vh;
+  width: 92%;
+  margin-left: 0%;
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+  color: black !important;
+  overflow: scroll;
+}
+
+.CollaboratorHeader{
+  margin-top:2%;
+}
+
+
+.tableHeight{
+  height: 35vh;
+}

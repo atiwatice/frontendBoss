@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import styles from "../styles/Register.module.css";
-import { Row, Col, Form, Input, Divider, Modal } from "antd";
-import { Button } from "react-bootstrap";
+import { Row, Col, Form, Input, Divider, Modal, Button } from "antd";
+// import { Button } from "react-bootstrap";
 import Axios from "../config/axios.setup";
 export default function Register() {
   const [form] = Form.useForm();
@@ -221,17 +221,15 @@ export default function Register() {
                   <Form.Item>
                     <Button
                       type="primary"
-                      variant="secondary"
                       htmlType="submit"
-                      // className={styles.login_form_button}
+                      className={styles.login_form_button}
                     >
                       Register
                     </Button>
                   </Form.Item>
                   <Form.Item>
                     <Button
-                      variant="secondary"
-                      // className={styles.login_form_button}
+                      className={styles.login_form_button}
                       onClick={onReset}
                     >
                       Cancel

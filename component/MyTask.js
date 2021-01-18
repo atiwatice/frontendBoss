@@ -1,17 +1,23 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/myTask.module.css";
-import { Row, Col } from "antd";
+import { Row, Col, Form, Input, DatePicker, Select } from "antd";
+import CreateTask from "./createTask";
+import SubTask from "./subTask";
 
 export default function MyTask() {
   return (
     <div className={styles.background}>
-        <Col span={24}>
-      <Row gutter={[40, 16]}>
-        <Col span={10}>col-12</Col>
-        <Col span={10}>col-12</Col>
+      <Row>
+        <Col span={12} className={styles.leftrightTop}>
+          <CreateTask />
+        </Col>
+        <Col span={1}>
+        <span className={styles.divider} />
+        </Col>
+        <Col className={styles.leftrightTop} span={11}>
+          <SubTask/>
+        </Col>
       </Row>
-      </Col>
     </div>
   );
 }

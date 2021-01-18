@@ -1,0 +1,43 @@
+.background1 {
+    background-color: #f0f0f0;
+    opacity: 0.7;
+    height: 38vh;
+    width: 97%;
+    margin-top: 1%;
+    color: black !important;
+  }
+
+  .background2 {
+    background-color: #f0f0f0;
+    opacity: 0.7;
+    height: 67vh;
+    width: 97%;
+    margin-top: 1%;
+    color: black !important;
+  }
+  
+ .styleForm{
+     margin-top: 2%;
+     margin-left: 2%;
+     margin-right: 5%;
+ }
+ .styleFormInner{
+     margin-right: 5%;
+ }
+
+ .buttonC {
+
+    background-color: #7e7e7e !important;
+    border-color:#7e7e7e !important;
+    color: #FFFFFF !important;
+  }
+  .buttonC:hover {
+
+    background-color: #a3a3a3 !important;
+    border-color:#7e7e7e !important;
+    color: #FFFFFF !important;
+  }
+
+  .FormAddcompany{
+      margin-left: 7%;
+  }

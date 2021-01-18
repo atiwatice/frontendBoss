@@ -1,13 +1,103 @@
 .background {
-    background-color: #f0f0f0;
-    opacity: 0.7;
-    /* width: '50'; */
-    /* min-height: 60vh; */
-    max-height: 79vh;
-    width: 95%;
-  
-    margin-top: 1%;
-    /* margin-left: 1%; */
-    
-    color: black !important;
-  }
+  background-color: #f0f0f0;
+  opacity: 0.7;
+  height: 87vh;
+  width: 97%;
+  margin-top: 1%;
+  color: black !important;
+}
+
+.boxLeft {
+  background-color: #bdbdbd;
+  border-style: solid;
+  border-color: black;
+
+  border-width: 1px;
+  /* opacity: 0.7; */
+  height: 42vh;
+  width: 90%;
+  margin-top: 0%;
+  margin-bottom: 1.5%;
+  color: black !important;
+  overflow: scroll;
+}
+.boxRight {
+  background-color: #bdbdbd;
+  border-style: solid;
+  border-color: black;
+
+  border-width: 1px;
+  /* opacity: 0.7; */
+  height: 74vh;
+  width: 100%;
+  margin-top: 0%;
+  margin-bottom: 1.5%;
+  color: black !important;
+  overflow: scroll;
+}
+
+
+.divider {
+  display: inline-block;
+  width: 2px;
+  background-color: black;
+  margin: 0 10px;
+  height: 84vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dividerHori {
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  margin: 0 10px;
+  height: 2px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.leftrightTop {
+  margin-top: 1%;
+}
+
+.listTask{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.headerTaskList{
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 2%;
+  color:#474747;
+}
+
+.createButton{
+  margin-top:10%;
+}
+
+.login_form_button {
+  width: 100%;
+  background-color: #7e7e7e !important;
+  border-color:#7e7e7e !important;
+  color: #FFFFFF !important;
+}
+.login_form_button:hover {
+  width: 100%;
+  background-color: #a3a3a3 !important;
+  border-color:#7e7e7e !important;
+  color: #FFFFFF !important;
+}
+
+.itemFormSubTask{
+  margin:2%;
+}
+
+.selectTask{
+  margin:2%;
+}

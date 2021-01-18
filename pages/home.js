@@ -5,6 +5,8 @@ import { handleAuthSSR } from "../utils/auth";
 import HeaderComponent from "../component/header";
 import styles from "../styles/Home.module.css";
 import { Button, Tab, Row, Col, ListGroup } from "react-bootstrap";
+import ManageCoperate from "../component/manageCoperate";
+import Profile from "../component/profile";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -38,19 +40,19 @@ export default function Home() {
           <Col sm={10}>
             <Tab.Content>
               <Tab.Pane eventKey="#MT">
-                <MyTask/>
+                <MyTask />
               </Tab.Pane>
               <Tab.Pane eventKey="#UMT">
-                <div>Update Task Status</div>
+                <div>Update</div>
               </Tab.Pane>
               <Tab.Pane eventKey="#MC">
-                <div>Manage Collaborators</div>
+                <ManageCoperate />
               </Tab.Pane>
               <Tab.Pane eventKey="#RE">
                 <div>Report</div>
               </Tab.Pane>
               <Tab.Pane eventKey="#PR">
-                <div>Profile</div>
+                <Profile/>
               </Tab.Pane>
             </Tab.Content>
           </Col>
